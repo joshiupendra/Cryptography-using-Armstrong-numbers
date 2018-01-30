@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="289.0" prefWidth="389.0" style="-fx-background-color: #BBDEFB;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="armastrong_project.reciever_operations.Add_RecieverController">
+   <children>
+      <MenuBar layoutY="6.0" prefHeight="28.0" prefWidth="393.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Manage Profile">
+               <items>
+                  <MenuItem fx:id="edit_profile" mnemonicParsing="false" onAction="#handleEditProfileAction" text="Edit Profile" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Reciever Operation">
+               <items>
+                  <MenuItem fx:id="add_re" mnemonicParsing="false" onAction="#handleAddAction" text="Add" />
+                  <MenuItem fx:id="update_re" mnemonicParsing="false" onAction="#handleUpdateAction" text="Update" />
+                  <MenuItem fx:id="delete_re" mnemonicParsing="false" onAction="#handleDeleteAction" text="Delete" />
+                  <MenuItem fx:id="view_re" mnemonicParsing="false" onAction="#handleViewAction" text="View" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Date Operation">
+               <items>
+                  <MenuItem fx:id="encry" mnemonicParsing="false" onAction="#handleEncryptAction" text="Encrypt" />
+                  <MenuItem fx:id="decry" mnemonicParsing="false" onAction="#handleDecryptAction" text="Decrypt" />
+                  <MenuItem fx:id="send" mnemonicParsing="false" onAction="#handleSendAction" text="Send" />
+                  <MenuItem fx:id="recieve" mnemonicParsing="false" onAction="#handleRecieveAction" text="Recieve" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Logout">
+               <items>
+                  <MenuItem fx:id="exit" mnemonicParsing="false" onAction="#handleExitAction" text="Exit" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <TextField fx:id="name" layoutX="26.0" layoutY="50.0" prefHeight="25.0" prefWidth="318.0" promptText="Name" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="50.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="ip" layoutX="25.0" layoutY="112.0" prefHeight="25.0" prefWidth="318.0" promptText="IP" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Button fx:id="addButton" alignment="CENTER" layoutX="62.0" layoutY="208.0" mnemonicParsing="false" onAction="#handleAddButtonAction" prefHeight="37.0" prefWidth="97.0" style="-fx-background-color: blue; -fx-text-fill: white;" text="Add">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="clearButton" alignment="CENTER" layoutX="214.0" layoutY="208.0" mnemonicParsing="false" onAction="#handleClearButtonAction" prefHeight="37.0" prefWidth="97.0" style="-fx-background-color: blue; -fx-text-fill: white;" text="Clear">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

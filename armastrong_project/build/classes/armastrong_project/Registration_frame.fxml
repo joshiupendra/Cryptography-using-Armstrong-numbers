@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="593.0" prefWidth="378.0" style="-fx-background-color: #BBDEFB;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="armastrong_project.Registration_frameController">
+   <children>
+      <Label alignment="CENTER" layoutX="69.0" layoutY="14.0" style="-fx-background-color: black;" text="User Ragistration" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="name" layoutX="23.0" layoutY="41.0" prefHeight="25.0" prefWidth="337.0" promptText="Name" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="40.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextArea fx:id="address" layoutX="20.0" layoutY="90.0" prefHeight="100.0" prefWidth="338.0" promptText="Address" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="90.0">
+         <font>
+            <Font size="16.0" />
+         </font></TextArea>
+      <Label layoutX="20.0" layoutY="199.0" text="Date of Birth:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dob" layoutX="142.0" layoutY="199.0" prefHeight="25.0" prefWidth="217.0" />
+      <Label layoutX="20.0" layoutY="241.0" text="Mobile Number:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="mo_num" layoutX="142.0" layoutY="241.0" prefHeight="25.0" prefWidth="217.0" AnchorPane.rightAnchor="20.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="email" layoutX="142.0" layoutY="298.0" prefHeight="25.0" prefWidth="217.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Label layoutX="20.0" layoutY="298.0" text="Email ID:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="355.0" text="Username:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="username" layoutX="142.0" layoutY="355.0" prefHeight="25.0" prefWidth="217.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Label layoutX="20.0" layoutY="420.0" text="Password:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="476.0" text="Confirm Password:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="password" layoutX="161.0" layoutY="420.0" prefHeight="37.0" prefWidth="198.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </PasswordField>
+      <PasswordField fx:id="cpassword" layoutX="161.0" layoutY="470.0" prefHeight="37.0" prefWidth="198.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </PasswordField>
+      <Button fx:id="submit" layoutX="42.0" layoutY="534.0" mnemonicParsing="false" onAction="#handleSubmitButtonAction" prefHeight="37.0" prefWidth="101.0" style="-fx-background-color: blue;" text="Submit" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="back" layoutX="199.0" layoutY="534.0" mnemonicParsing="false" onAction="#handleBackButtonAction" prefHeight="37.0" prefWidth="101.0" style="-fx-background-color: blue;" text="Back" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

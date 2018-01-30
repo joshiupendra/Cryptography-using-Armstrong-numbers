@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="423.0" prefWidth="393.0" style="-fx-background-color: #BBDEFB;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="armastrong_project.data_operations.EncryptController">
+   <children>
+      <MenuBar prefHeight="28.0" prefWidth="393.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Manage Profile">
+               <items>
+                  <MenuItem fx:id="edit_profile" mnemonicParsing="false" onAction="#handleEditProfileAction" text="Edit Profile" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Reciever Operation">
+               <items>
+                  <MenuItem fx:id="add_re" mnemonicParsing="false" onAction="#handleAddAction" text="Add" />
+                  <MenuItem fx:id="update_re" mnemonicParsing="false" onAction="#handleUpdateAction" text="Update" />
+                  <MenuItem fx:id="delete_re" mnemonicParsing="false" onAction="#handleDeleteAction" text="Delete" />
+                  <MenuItem fx:id="view_re" mnemonicParsing="false" onAction="#handleViewAction" text="View" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Date Operation">
+               <items>
+                  <MenuItem fx:id="encry" mnemonicParsing="false" onAction="#handleEncryptAction" text="Encrypt" />
+                  <MenuItem fx:id="decry" mnemonicParsing="false" onAction="#handleDecryptAction" text="Decrypt" />
+                  <MenuItem fx:id="send" mnemonicParsing="false" onAction="#handleSendAction" text="Send" />
+                  <MenuItem fx:id="recieve" mnemonicParsing="false" onAction="#handleRecieveAction" text="Recieve" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Logout">
+               <items>
+                  <MenuItem fx:id="exit" mnemonicParsing="false" onAction="#handleExitAction" text="Exit" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <TextField fx:id="select_file" layoutX="31.0" layoutY="53.0" prefHeight="37.0" prefWidth="326.0" promptText="Select File" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="50.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Button fx:id="browse" layoutX="144.0" layoutY="103.0" mnemonicParsing="false" onAction="#handleBrowseButtonAction" prefHeight="37.0" prefWidth="85.0" style="-fx-background-color: blue; -fx-text-fill: white;" text="Browse">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <TextField fx:id="rtext" alignment="CENTER" layoutX="67.0" layoutY="157.0" prefHeight="37.0" prefWidth="56.0" promptText="R">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="btext" alignment="CENTER" layoutX="248.0" layoutY="157.0" prefHeight="37.0" prefWidth="56.0" promptText="B">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="gtext" alignment="CENTER" layoutX="159.0" layoutY="157.0" prefHeight="37.0" prefWidth="56.0" promptText="G">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="key1" layoutX="30.0" layoutY="217.0" prefHeight="37.0" prefWidth="65.0" promptText="Key1">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="key3" layoutX="298.0" layoutY="217.0" prefHeight="37.0" prefWidth="65.0" promptText="Key3">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="key2" layoutX="164.0" layoutY="217.0" prefHeight="37.0" prefWidth="65.0" promptText="Key2">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <GridPane layoutX="47.0" layoutY="282.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="rbutton" mnemonicParsing="false" onAction="#rbuttonAction" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: red;" />
+            <Button fx:id="bkbutton" mnemonicParsing="false" onAction="#bkbuttonAction" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="wbutton" mnemonicParsing="false" onAction="#wbuttonAction" prefHeight="32.0" prefWidth="102.0" style="-fx-background-color: white;" GridPane.columnIndex="1" />
+            <Button fx:id="ybutton" mnemonicParsing="false" onAction="#ybuttonAction" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: yellow;" GridPane.rowIndex="1" />
+            <Button fx:id="bbutton" mnemonicParsing="false" onAction="#bbuttonAction" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: blue;" GridPane.columnIndex="2" />
+            <Button fx:id="gbutton" mnemonicParsing="false" onAction="#gbuttonAction" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: green;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Button fx:id="encrypt" layoutX="45.0" layoutY="362.0" mnemonicParsing="false" onAction="#handleEncryptButtonAction" prefHeight="37.0" prefWidth="85.0" style="-fx-background-color: blue; -fx-text-fill: white;" text="Encrypt">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="clear" layoutX="243.0" layoutY="362.0" mnemonicParsing="false" onAction="#handleClearButtonAction" prefHeight="37.0" prefWidth="85.0" style="-fx-background-color: blue; -fx-text-fill: white;" text="Clear">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="285.0" prefWidth="320" style="-fx-background-color: #BBDEFB;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="armastrong_project.FXMLDocumentController">
+   <children>
+      <Label fx:id="titleLable" alignment="CENTER" layoutX="14.0" layoutY="14.0" style="-fx-background-color: black; -fx-text-fill: white;" text="User Login" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="login" layoutX="32.0" layoutY="225.0" mnemonicParsing="false" onAction="#handleLoginButtonAction" prefHeight="38.0" prefWidth="105.0" style="-fx-background-color: blue; -fx-text-fill: white;" stylesheets="@style_color.css" text="Login">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="clearb" layoutX="184.0" layoutY="225.0" mnemonicParsing="false" onAction="#handleClearButtonAction" prefHeight="38.0" prefWidth="105.0" style="-fx-background-color: blue; -fx-text-fill: white;" stylesheets="@style_color.css" text="Clear">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <TextField fx:id="username" layoutX="20.0" layoutY="101.0" promptText="Username" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="100.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Button fx:id="register" layoutX="201.0" layoutY="6.0" mnemonicParsing="false" onAction="#handleRegisterButtonAction" prefHeight="38.0" prefWidth="105.0" style="-fx-background-color: blue; -fx-text-fill: white;" stylesheets="@style_color.css" text="Reginster">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="password" layoutX="20.0" layoutY="155.0" prefHeight="25.0" prefWidth="280.0" promptText="Password">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </PasswordField>
+   </children>
+</AnchorPane>
